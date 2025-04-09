@@ -1,0 +1,130 @@
+<div class="body-wrapper">
+  <div class="container-fluid">
+    <div class="row" *ngIf="!checkingLogInStatus">
+      <!--login-section-->
+      <div
+        class="h-screen d-flex flex-column justify-content-between sm-12 col-md-12 col-lg-6 p-0 order-1 order-lg-0"
+      >
+        <div class="login-inner">
+          <div class="text-center login-spacer-40">
+            <img
+              routerLink="/home-page"
+              src="assets/images/icons/logo.png"
+              class="logo"
+              alt="logo"
+            />
+          </div>
+          <form class="custom-form" autocomplete="off">
+            <div class="col">
+              <div class="mb-4 text-dark">
+                Welcome to
+                <h3>MediCare</h3>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="username"
+                  [(ngModel)]="user.Username"
+                  #username="ngModel"
+                  [ngClass]="{
+                    'is-invalid':
+                      username.invalid && (username.dirty || username.touched)
+                  }"
+                  required
+                />
+                <label class="form-control-placeholder not-required" for="name"
+                  >Username</label
+                >
+                <div class="invalid-feedback">Username is required</div>
+              </div>
+
+              <div class="form-group mb-0">
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  [(ngModel)]="user.Password"
+                  #password="ngModel"
+                  (keyup.enter)="login()"
+                  [ngClass]="{
+                    'is-invalid':
+                      password.invalid && (password.dirty || password.touched)
+                  }"
+                  required
+                />
+                <label class="form-control-placeholder not-required" for="name"
+                  >Password</label
+                >
+                <div class="invalid-feedback">Enter your password too!</div>
+                <div *ngIf="showErrorMessage" class="col link error-text">
+                  <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                  Invalid username or password. Please try again.
+                </div>
+              </div>
+            </div>
+
+            <div class="col link">
+              <label class="control outlined control-checkbox checkbox-primary"
+                >Remember me
+                <input
+                  type="checkbox"
+                  checked="checked"
+                  [(ngModel)]="user.RememberMe"
+                  name="rememberme"
+                  #rememberme="ngModel"
+                />
+                <div class="control-indicator"></div>
+              </label>
+              <!-- <a routerLink="/register" class="float-right">Register</a> -->
+              <a routerLink="/forgot-password" class="float-right"
+                >Forgot Password?</a
+              >
+            </div>
+
+            <div class="col">
+              <a type="button" class="login-btn" (click)="login()" appSounds
+                >login</a
+              >
+              <!-- <div class="link text-right">
+                  <a routerLink="/scan" class="pl-1 register">SCAN QR CODE</a>
+                </div> -->
+            </div>
+            <!-- <div class="col link text-center">
+                <span>Don't have an account?</span>
+                <a routerLink="/register" class="pl-1 register">REGISTER</a>
+              </div> -->
+          </form>
+        </div>
+      </div>
+      <!--login-section-END-->
+
+      <div class="sm-12 col-md-12 col-lg-6 p-0 order-0 order-lg-1">
+        <div class="banner">
+          <div class="banner-text pt-5">
+            <h3>
+              <span>a world class education</span> for anyone, anywhere.100%
+              free
+            </h3>
+          </div>
+          <div>
+            <img src="assets/img/online-education.png" class="banner-img" />
+          </div>
+
+          <div class="banner-text banner-text-tab">
+            <h5>You can learn anything.</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="text-center"
+      *ngIf="checkingLogInStatus"
+      style="margin-left: 45%; margin-top: 10%"
+    >
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+</div>

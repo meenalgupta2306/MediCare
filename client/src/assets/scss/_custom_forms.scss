@@ -1,0 +1,166 @@
+.custom-form {
+    .form-section {
+      // padding: 15px 15px 0;
+      margin-bottom: 30px;
+    }
+  
+    .ui-inputtext:enabled:hover:not(.ui-state-error) {
+      border-color: #e5e9f2;
+    }
+  
+    .input-group-text {
+      padding: 0.5rem 1rem;
+    }
+  
+    label {
+      color: $secondary;
+      padding-left: 15px;
+      position: relative;
+      margin-bottom: 0px;
+    }
+  
+    .form-control-placeholder {
+      position: absolute;
+      top: 10px;
+      left: 0px;
+      transition: all 0.25s;
+      color: $secondary;
+      font-size: $font-size-14;
+    }
+  
+    p-calender label {
+      position: absolute;
+      top: 10px;
+      left: 0px;
+      transition: all 0.25s;
+      color: #8a909d;
+      font-size: 14px;
+    }
+  
+    p-calender .ui-inputwrapper-filled input {
+      top: -13px;
+      font-size: 12px;
+      z-index: 1;
+      color: $primary;
+      display: inline-block;
+      padding: 3px 6px;
+      background: $white;
+      left: 6px;
+    }
+  
+    [required]+label:not(.not-required)::before,
+    .required::before {
+      content: "*";
+      color: #c00;
+      font-size: 14px;
+      margin-right: 2px;
+    }
+  
+    .form-control:read-only+.form-control-placeholder,
+    .form-control:focus+.form-control-placeholder,
+    .form-control:valid+.form-control-placeholder,
+    .form-control:disabled+.form-control-placeholder,
+    .form-control.is-invalid+.form-control-placeholder {
+      top: -13px;
+      font-size: 12px;
+      z-index: 1;
+      color: $primary;
+      display: inline-block;
+      padding: 1px 6px;
+      background: $white;
+      left: 6px;
+    }
+  
+    ngb-datepicker.dropdown-menu.show~.form-control-placeholder {
+      top: -13px;
+      font-size: 12px;
+      z-index: 1;
+      color: #4c84ff;
+      display: inline-block;
+      padding: 3px 6px;
+      background: #ffffff;
+      left: 6px;
+    }
+  
+    .custom.ng-select.ng-select-multiple.ng-valid~label,
+    .custom.ng-select.ng-select-multiple.ng-invalid.ng-touched~label,
+    .custom.ng-select.ng-select-multiple.ng-select-focused :not(.ng-untouched)~label {
+      top: -5px;
+      font-size: 12px;
+      z-index: 1;
+      color: #4c84ff;
+      display: inline-block;
+      padding: 3px 6px;
+      background: #ffffff;
+      left: 6px;
+    }
+  
+    input,
+    select {
+      border-radius: 2px;
+      height: 40px !important;
+      background: transparent;
+      padding: 15px;
+      color: $input-text;
+      font-size: $font-size-14;
+      position: relative;
+      z-index: 1;
+      padding: 0.5rem 0.625rem !important;
+  
+      &:focus {
+        border: 2px solid;
+        border-color: $primary;
+        box-shadow: 0px 3px 9px #edf4fe;
+      }
+    }
+  
+    textarea {
+      border-radius: 2px;
+      height: 40px;
+      background: transparent;
+      padding: 15px;
+      color: $input-text;
+      font-size: $font-size-14;
+      position: relative;
+      z-index: 1;
+      padding: 0.5rem 0.625rem !important;
+  
+      &:focus {
+        border: 2px solid;
+        border-color: $primary;
+        box-shadow: 0px 3px 9px #edf4fe;
+      }
+    }
+  
+    .form-group {
+      position: relative;
+    }
+  
+    textarea {
+      height: 80px;
+    }
+  
+    .pos {
+      position: absolute;
+      left: -3px;
+      top: 12px;
+      font-weight: $font-weight-medium;
+      color: $dark;
+      font-size: $font-size-16;
+    }
+  
+    .control-radio {
+      // color: $inp  ut-text;
+      padding-left: 20px;
+    }
+  
+    .control-checkbox {
+      color: $input-text;
+      padding-left: 20px;
+    }
+  
+    .date {
+      font-size: $font-size-14;
+      color: $secondary;
+    }
+  }

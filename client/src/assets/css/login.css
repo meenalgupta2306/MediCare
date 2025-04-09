@@ -1,0 +1,46 @@
+.login-inner .link a.register{
+    font-size: 14px;
+}
+
+
+
+.logo{
+    width: 160px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background: #ffb900;
+    width: 100%;
+    color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    box-shadow: 2px 6px 15px #fff1ce;
+    border: 0px;
+    transition: all .3s;
+    margin-bottom: 15px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 4px;
+    text-align: center;
+    display: block;
+}
+
+.login-btn:hover {
+    background: #ff9900;
+    color: #fff;
+}
+
+.login-inner {
+    width: 446px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+.login-inner .link a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #0083ff;
+    padding-top: 4px;
+    font-weight: 500;
+}

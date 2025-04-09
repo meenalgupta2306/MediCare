@@ -1,0 +1,28 @@
+$grid-breakpoints: (
+xs: 0,
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px,
+xxl: 1500px
+);
+
+$primary:       #4c84ff !default;
+$dark:          #1b223c !default;
+$secondary:     #8a909d !default;
+$white:         #ffffff !default;
+$input-text:    #3b3b3b;
+
+
+// Fonts:           ;
+
+$font-family-sans-roboto:       'Roboto', sans-serif !default;
+$font-family-matetial-icon:     'Material Design Icons' !default;
+$font-family-base:              $font-family-sans-roboto !default;
+$font-family-icon:              $font-family-matetial-icon !default;
+
+$font-size-base:                .875rem !default;
+$font-weight-medium:            500!default;
+$font-size-16:16px;
+$font-size-14:14px;
+$font-size-11:11px;
