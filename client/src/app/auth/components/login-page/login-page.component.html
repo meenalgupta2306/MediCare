@@ -65,8 +65,7 @@
             </div>
 
             <div class="col link">
-              <label class="control outlined control-checkbox checkbox-primary"
-                >Remember me
+              <div class="left-controls">
                 <input
                   type="checkbox"
                   checked="checked"
@@ -74,12 +73,12 @@
                   name="rememberme"
                   #rememberme="ngModel"
                 />
-                <div class="control-indicator"></div>
-              </label>
-              <!-- <a routerLink="/register" class="float-right">Register</a> -->
-              <a routerLink="/forgot-password" class="float-right"
-                >Forgot Password?</a
-              >
+                <label class="control-checkbox">Remember Me</label>
+              </div>
+
+              <a routerLink="/forgot-password" style="margin-left: auto">
+                Forgot Password?
+              </a>
             </div>
 
             <div class="col">
@@ -102,17 +101,17 @@
       <div class="sm-12 col-md-12 col-lg-6 p-0 order-0 order-lg-1">
         <div class="banner">
           <div class="banner-text pt-5">
-            <h3>
-              <span>a world class education</span> for anyone, anywhere.100%
-              free
-            </h3>
+            <h1><span>Your health, our priority</span> wherever you are</h1>
           </div>
-          <div>
-            <img src="assets/img/online-education.png" class="banner-img" />
+          <div style="padding: 65px 1px 65px 0px">
+            <img
+              src="assets/images/img/online-medicare.png"
+              class="banner-img"
+            />
           </div>
 
           <div class="banner-text banner-text-tab">
-            <h5>You can learn anything.</h5>
+            <h5>Bringing expert care closer to you.</h5>
           </div>
         </div>
       </div>

@@ -1,8 +1,64 @@
-.login-inner .link a.register{
-    font-size: 14px;
+
+.body-wrapper{
+    background: #fff;
+    width:100%;
+
+}
+
+.banner {
+
+    /*    background-image: url(../../assets/img/banner-sm.jpg);*/
+    padding:  0px;
+    /* position: fixed; */
+    min-height: 100vh;
+    height: 100%;
+    /* background: rgb(59,114,255); */
+    background: -moz-linear-gradient(180deg, rgba(59,114,255,1) 48%, rgba(59,114,255,1) 52%, rgba(21,55,240,1) 52%);
+    background: -webkit-linear-gradient(180deg, rgba(59,114,255,1) 48%, rgba(59,114,255,1) 52%, rgba(21,55,240,1) 52%);
+    /* background: linear-gradient(180deg, rgba(59,114,255,1) 48%, rgba(59,114,255,1) 52%, rgba(21,55,240,1) 52%); */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3b72ff",endColorstr="#1537f0",GradientType=1);
+    background: linear-gradient(180deg, #3B72FF 0%, #61b8e1 100%);
+}
+
+.login-inner {
+    width: 446px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+
+.mb-70 {
+    margin-bottom: 40px;
 }
 
 
+.text-sm {
+    font-size: 12px;
+    color: #505058;
+}
+
+
+
+.login-inner .link {
+    margin: 5px 0px 20px;
+}
+
+.custom-form .control-checkbox{
+    font-size: 12px;
+    color: #0083ff;
+    display: inline-block;
+}
+
+.login-inner .link a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #0083ff;
+    padding-top: 4px;
+    font-weight: 500;
+}
+
+.login-inner .link a.register{
+    font-size: 14px;
+}
 
 .logo{
     width: 160px;
@@ -10,7 +66,7 @@
 }
 
 .login-btn {
-    background: #ffb900;
+    background: #162859;
     width: 100%;
     color: #fff !important;
     text-transform: uppercase;
@@ -32,15 +88,94 @@
     color: #fff;
 }
 
-.login-inner {
-    width: 446px;
+.banner-text{
+    width: 460px;
+    text-align: center;
+/*    padding-top: 70px;*/
+    color: #fff;
     margin: 0 auto;
-    margin-top: 90px;
 }
-.login-inner .link a {
-    text-decoration: none;
-    font-size: 12px;
-    color: #0083ff;
-    padding-top: 4px;
-    font-weight: 500;
+
+
+
+
+.banner-text h3 {
+    font-size: 34px;
 }
+
+.banner-text p{
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 14px;
+    line-height: 20px;
+    color:#b3bdf2;
+}
+.banner-img {
+    width: 100%;
+    max-height: 400px; /* or any height you prefer */
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    /* padding: 65px 1px 65px 0px; */
+  }
+
+.text-xs{
+    font-size: 14px;
+    color: #4d4d4d;
+    }
+.banner-text span{
+    font-weight: 100;
+    display: block;
+    margin-bottom: 4px;
+}
+
+@media screen and (max-width:767px){
+    .banner {
+        display: none;
+    }
+    .banner-text {
+        display: none;
+    }
+    .login-spacer-40{
+        margin-bottom: 20px;
+    }
+    .login-inner {
+        width: 80%;
+        margin-top: 50px;
+    }
+    .body-wrapper{
+        height:100vh;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .banner {
+        min-height: 200px;
+        text-align:center;
+        position: relative;
+    }
+    .banner-text-tab{display: none; }
+    .banner-img {
+        width: 45%;
+        margin-top: -10px;
+        padding-bottom: 15px;
+    }
+    .banner-text h3{font-size: 20px;}
+    .banner-text{margin-top: -15px;}  
+    .login-inner {
+        width: 60%;
+        margin-top: 20px;
+    }
+    .body-wrapper{
+        height:100vh;
+    }
+}
+.login-spacer-40 {
+    margin-bottom: 40px;
+}
+
+.icon-and-key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
