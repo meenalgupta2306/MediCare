@@ -1,0 +1,9 @@
+{
+    "dev": {
+        "driver": "pg",
+        "user": "postgres",
+        "password": "meenal",
+        "host": "0.0.0.0",
+        "database": "MediCare"
+    }
+}
