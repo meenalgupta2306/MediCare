@@ -1,0 +1,10 @@
+{
+    "env": "development",
+    "server":{
+        "port": 8000,
+        "host": "0.0.0.0"
+    },
+    "client": {
+        "url": "http://localhost:4200"
+    }
+}

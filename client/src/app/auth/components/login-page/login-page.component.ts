@@ -20,6 +20,10 @@ export class LoginPageComponent implements OnInit {
   }
 
   login() {
+
+    this.authService.login(this.user).subscribe((res: any) => { 
+      console.log("hurray")
+    })
     /* this._cookieService.delete("qrCode");
     this._cookieService.delete("passCode");
     delete this.user.qrCode;
