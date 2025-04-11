@@ -2,17 +2,10 @@
   <div class="container-fluid">
     <div class="row" *ngIf="!checkingLogInStatus">
       <!--login-section-->
-      <div
-        class="h-screen d-flex flex-column justify-content-between sm-12 col-md-12 col-lg-6 p-0 order-1 order-lg-0"
-      >
+      <div class="h-screen d-flex flex-column justify-content-between sm-12 col-md-12 col-lg-6 p-0 order-1 order-lg-0">
         <div class="login-inner">
           <div class="text-center login-spacer-40">
-            <img
-              routerLink="/home-page"
-              src="assets/images/icons/logo.png"
-              class="logo"
-              alt="logo"
-            />
+            <img routerLink="/home-page" src="assets/images/icons/logo.png" class="logo" alt="logo" />
           </div>
           <form class="custom-form" autocomplete="off">
             <div class="col">
@@ -21,41 +14,22 @@
                 <h3>MediCare</h3>
               </div>
               <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  name="username"
-                  [(ngModel)]="user.Username"
-                  #username="ngModel"
+                <input type="text" class="form-control" name="username" [(ngModel)]="user.Username" #username="ngModel"
                   [ngClass]="{
                     'is-invalid':
                       username.invalid && (username.dirty || username.touched)
-                  }"
-                  required
-                />
-                <label class="form-control-placeholder not-required" for="name"
-                  >Username</label
-                >
+                  }" required />
+                <label class="form-control-placeholder not-required" for="name">Username</label>
                 <div class="invalid-feedback">Username is required</div>
               </div>
 
               <div class="form-group mb-0">
-                <input
-                  type="password"
-                  class="form-control"
-                  name="password"
-                  [(ngModel)]="user.Password"
-                  #password="ngModel"
-                  (keyup.enter)="login()"
-                  [ngClass]="{
+                <input type="password" class="form-control" name="password" [(ngModel)]="user.Password"
+                  #password="ngModel" (keyup.enter)="login()" [ngClass]="{
                     'is-invalid':
                       password.invalid && (password.dirty || password.touched)
-                  }"
-                  required
-                />
-                <label class="form-control-placeholder not-required" for="name"
-                  >Password</label
-                >
+                  }" required />
+                <label class="form-control-placeholder not-required" for="name">Password</label>
                 <div class="invalid-feedback">Enter your password too!</div>
                 <div *ngIf="showErrorMessage" class="col link error-text">
                   <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
@@ -64,15 +38,10 @@
               </div>
             </div>
 
-            <div class="col link">
+            <div class="col link" [style.visibility]="currentPath ? 'hidden' : 'visible'">
               <div class="left-controls">
-                <input
-                  type="checkbox"
-                  checked="checked"
-                  [(ngModel)]="user.RememberMe"
-                  name="rememberme"
-                  #rememberme="ngModel"
-                />
+                <input type="checkbox" checked="checked" [(ngModel)]="user.RememberMe" name="rememberme"
+                  #rememberme="ngModel" />
                 <label class="control-checkbox">Remember Me</label>
               </div>
 
@@ -82,17 +51,17 @@
             </div>
 
             <div class="col">
-              <a type="button" class="login-btn" (click)="login()" appSounds
-                >login</a
-              >
+              <a type="button" class="login-btn" (click)="login()" appSounds>{{!currentPath? 'LOGIN' : 'REGISTER'}}</a>
               <!-- <div class="link text-right">
                   <a routerLink="/scan" class="pl-1 register">SCAN QR CODE</a>
                 </div> -->
             </div>
-            <!-- <div class="col link text-center">
-                <span>Don't have an account?</span>
-                <a routerLink="/register" class="pl-1 register">REGISTER</a>
-              </div> -->
+            <div class="col link text-center">
+              <span>{{ currentPath ? 'Back to' : "Don't have an account?" }}</span>
+              <a style="padding-top: 0;" [routerLink]="currentPath ? '' : '/register'"
+                class="pl-1 register">{{currentPath? 'LOGIN' :
+                'REGISTER'}}</a>
+            </div>
           </form>
         </div>
       </div>
@@ -104,10 +73,7 @@
             <h1><span>Your health, our priority</span> wherever you are</h1>
           </div>
           <div style="padding: 65px 1px 65px 0px">
-            <img
-              src="assets/images/img/online-medicare.png"
-              class="banner-img"
-            />
+            <img src="assets/images/img/online-medicare.png" class="banner-img" />
           </div>
 
           <div class="banner-text banner-text-tab">
@@ -116,11 +82,7 @@
         </div>
       </div>
     </div>
-    <div
-      class="text-center"
-      *ngIf="checkingLogInStatus"
-      style="margin-left: 45%; margin-top: 10%"
-    >
+    <div class="text-center" *ngIf="checkingLogInStatus" style="margin-left: 45%; margin-top: 10%">
       <div class="spinner-border" role="status">
         <span class="sr-only">Loading...</span>
       </div>

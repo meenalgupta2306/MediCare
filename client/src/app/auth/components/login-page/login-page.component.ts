@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/_services/auth.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login-page',
@@ -10,16 +12,33 @@ export class LoginPageComponent implements OnInit {
   user: any = {};
   checkingLogInStatus = false;
   showErrorMessage = false;
+  currentPath = "";
 
   constructor(
     private authService: AuthService,
+    private route: ActivatedRoute,
+    private router: Router
     // private _cookieService: CookieService
   ) { }
 
   ngOnInit(): void {
+    this.currentPath = this.router.url.split('/')[1];
+    if (this.currentPath === 'register') {
+      this.user = {};
+      return;
+    }
+  }
+
+  registerUser() {
+    
   }
 
   login() {
+    if (this.currentPath === 'register') {
+      this.user = {};
+      this.registerUser();
+      return;
+    }
 
     this.authService.login(this.user).subscribe((res: any) => { 
       console.log("hurray")
